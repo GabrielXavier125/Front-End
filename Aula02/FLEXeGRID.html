@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Diferença Flex vs Grid</title>
+    <style>
+        /* Estilos Gerais para visualização */
+        body { font-family: sans-serif; padding: 20px; background-color: #f0f0f0; }
+        h2 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 40px;}
+        .box { color: white; padding: 20px; font-weight: bold; font-size: 1.2rem; text-align: center; border-radius: 8px;}
+        
+        /* -----------------------------------------------------------
+           EXEMPLO 1: FLEXBOX (Unidimensional - Linha)
+           ----------------------------------------------------------- */
+        .flex-container {
+            display: flex;             /* Ativa o Flexbox */
+            justify-content: space-between; /* Espalha os itens nas pontas */
+            align-items: center;       /* Centraliza verticalmente */
+            
+            background-color: #fff;
+            padding: 15px;
+            border: 2px dashed #2196F3; /* Azul */
+        }
+
+        .flex-item {
+            background-color: #2196F3;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        /* -----------------------------------------------------------
+           EXEMPLO 2: GRID (Bidimensional - Linhas e Colunas)
+           ----------------------------------------------------------- */
+        .grid-container {
+            display: grid;             /* Ativa o Grid */
+            
+            /* Define 3 colunas de tamanhos iguais */
+            grid-template-columns: 1fr 1fr 1fr; 
+            /* Define que as linhas terão 100px de altura mínima */
+            grid-auto-rows: 100px; 
+            
+            gap: 15px; /* Espaço entre as células */
+            
+            background-color: #fff;
+            padding: 15px;
+            border: 2px dashed #E91E63; /* Rosa */
+        }
+
+        .grid-item {
+            background-color: #E91E63;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* A MÁGICA DO GRID: Controlando espaço 2D */
+        
+        /* O Item 1 vai ocupar 2 colunas */
+        .item-grande-horizontal {
+            grid-column: span 2; 
+            background-color: #C2185B;
+        }
+
+        /* O Item 3 vai ocupar 2 linhas (altura) */
+        .item-grande-vertical {
+            grid-row: span 2;
+            background-color: #880E4F;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>1. Flexbox: O Fluxo (1D)</h2>
+    <p>Perceba como os itens se alinham em uma única linha. O foco é distribuir o espaço entre eles.</p>
+    
+    <div class="flex-container">
+        <div class="flex-item">Logo</div>
+        <div class="flex-item">Sobre</div>
+        <div class="flex-item">Serviços</div>
+        <div class="flex-item">Contato</div>
+    </div>
+
+    <h2>2. Grid: O Tabuleiro (2D)</h2>
+    <p>Perceba como manipulamos largura e altura ao mesmo tempo. O item 1 estica para o lado, o item 3 estica para baixo.</p>
+
+    <div class="grid-container">
+        <div class="grid-item item-grande-horizontal">1 (Largo)</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item item-grande-vertical">3 (Alto)</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+</body>
+</html>
