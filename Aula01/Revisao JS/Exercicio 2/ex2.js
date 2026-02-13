@@ -10,7 +10,7 @@ if( saldo_res > 0){
     console.log('Saldo Positivo: ' + saldo_res)
     console.log("Total Despesas: "+ total_desp)
     console.log("Salário: "+ salario)
-} else if ( saldo_res = 0) {
+} else if ( saldo_res === 0) {
     console.log('Saldo no Limite: '+ saldo_res)
     console.log("Total Despesas: "+ total_desp)
     console.log("Salário: "+ salario)
