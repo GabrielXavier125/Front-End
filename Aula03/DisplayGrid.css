@@ -8,53 +8,39 @@
             margin: 0;
             background: #ffffff;
         }
+        /* Container with three stacked sections using Grid */
         .nome1{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: repeat(3, 200px);
+            gap: 20px;
             padding: 30px;
             background-color: aqua;
             width: 500px;
-            height: auto;
+            box-sizing: border-box;
         }
-        .nome2{
-            background-color: coral;
-            width: auto;
-            height: 200px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;                              
-            align-items: center;
-            border: 2px solid #000000;
-
-        }
-        .nome3{
-            background-color: chartreuse;
-            width: auto;
-            height: 200px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            border: 2px solid #000000;
-
-        }
+        /* Each row uses a 3-column grid for the small boxes */
+        .nome2,
+        .nome3,
         .nome4{
-            background-color: cadetblue;
-            width: auto;
+            background-color: coral;
             height: 200px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 0 15px; /* mesmo espaçamento lateral do gap */
             align-items: center;
+            justify-items: center;
             border: 2px solid #000000;
+            box-sizing: border-box;
         }
+        .nome3{ background-color: chartreuse; }
+        .nome4{ background-color: cadetblue; }
         .nome5{
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             background-color: orange;
             border: 1px solid #000000;
-
+            box-sizing: border-box;
         }
 
 
