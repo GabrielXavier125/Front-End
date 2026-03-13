@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel_Xavier • Perfil</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar">
+        <div class="navbar__content">
+          <div class="navbar__logo">
+            <i class="fa-brands fa-instagram navbar__logo-icon" aria-hidden="true"></i>
+            <span class="logo-text">Instagram</span>
+          </div>
+
+          <div class="navbar__search">
+            <input
+              type="text"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar"
+              disabled
+            />
+          </div>
+
+          <nav class="navbar__icons" aria-label="Navegação principal">
+            <a class="icon-button" href="index.html" aria-label="Página inicial">
+              <i class="fa-solid fa-house"></i>
+            </a>
+            <a class="icon-button" href="reels.html" aria-label="Reels">
+              <i class="fa-solid fa-clapperboard"></i>
+            </a>
+            <button class="icon-button" aria-label="Mensagens">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <button class="icon-button profile-avatar" aria-label="Perfil">
+              <img
+                src="Imagens/Foto_1.jpg"
+                alt="Foto de perfil"
+              />
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main class="profile-layout">
+        <section class="profile-header" aria-label="Informações do perfil">
+          <div class="profile-header__avatar">
+            <img src="Imagens/Foto_1.jpg" alt="Foto de perfil de Gabriel_Xavier" />
+          </div>
+          <div class="profile-header__info">
+            <div class="profile-header__row">
+              <h2 class="profile-header__username">Gabriel_Xavier</h2>
+              <button class="profile-header__button">Editar perfil</button>
+            </div>
+            <ul class="profile-header__stats">
+              <li><strong>8</strong> publicações</li>
+              <li><strong>1 204</strong> seguidores</li>
+              <li><strong>320</strong> a seguir</li>
+            </ul>
+            <div class="profile-header__bio">
+              <span class="profile-header__name">Gabriel Xavier</span>
+              <span>Amante de automobilismo, track days e fotografia de carros de corrida.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-posts" aria-label="Publicações de Gabriel_Xavier">
+          <div class="profile-posts__tabs">
+            <button class="profile-posts__tab profile-posts__tab--active">
+              <i class="fa-solid fa-table-cells"></i>
+              <span>Publicações</span>
+            </button>
+          </div>
+
+          <div class="profile-posts__grid">
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_1.jpg" alt="Publicação 1" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_2.jpg" alt="Publicação 2" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_3.jpg" alt="Publicação 3" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_4.jpg" alt="Publicação 4" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_5.jpg" alt="Publicação 5" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_6.jpg" alt="Publicação 6" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_7.jpg" alt="Publicação 7" />
+            </div>
+            <div class="profile-posts__item">
+              <img src="Imagens/Foto_8.jpg" alt="Publicação 8" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+

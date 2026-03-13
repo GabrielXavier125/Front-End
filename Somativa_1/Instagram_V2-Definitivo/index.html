@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Fonte semelhante à do Instagram -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ícones Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- Navbar -->
+      <header class="navbar">
+        <div class="navbar__content">
+          <div class="navbar__logo">
+            <i class="fa-brands fa-instagram navbar__logo-icon" aria-hidden="true"></i>
+            <span class="logo-text">Instagram</span>
+          </div>
+
+          <div class="navbar__search">
+            <input
+              type="text"
+              placeholder="Pesquisar"
+              aria-label="Pesquisar"
+              id="navbar-search-input"
+            />
+            <div
+              class="navbar__search-results"
+              id="navbar-search-results"
+              aria-label="Sugestões de pesquisa"
+            ></div>
+          </div>
+
+          <nav class="navbar__icons" aria-label="Navegação principal">
+            <a class="icon-button" href="index.html" aria-label="Página inicial">
+              <i class="fa-solid fa-house"></i>
+            </a>
+            <a class="icon-button" href="reels.html" aria-label="Reels">
+              <i class="fa-solid fa-clapperboard"></i>
+            </a>
+            <button class="icon-button" aria-label="Mensagens">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <a class="icon-button profile-avatar" href="profile.html" aria-label="Perfil">
+              <img
+                src="Imagens/Foto_1.jpg"
+                alt="Foto de perfil"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Layout principal -->
+      <main class="layout">
+        <!-- Feed -->
+        <section class="feed" aria-label="Feed de publicações">
+          <!-- Post 1 - Imagem -->
+          <article class="post">
+            <header class="post__header">
+              <div class="post__user">
+                <img
+                  class="post__avatar"
+                  src="Imagens/Foto_2.jpg"
+                  alt="Foto de perfil de ana.travel"
+                />
+                <div class="post__user-info">
+                  <span class="post__username">ana.travel</span>
+                  <span class="post__location">Lisboa, Portugal</span>
+                </div>
+              </div>
+              <button class="icon-button" aria-label="Mais opções">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </header>
+
+            <div class="post__media">
+              <img
+                src="Imagens/Foto_3.jpg"
+                alt="Vista da cidade ao pôr do sol"
+              />
+            </div>
+
+            <div class="post__actions">
+              <div class="post__actions-left">
+                <button class="icon-button" aria-label="Gostar">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="icon-button" aria-label="Comentar">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <button class="icon-button" aria-label="Partilhar">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+              <button class="icon-button" aria-label="Guardar publicação">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+
+            <div class="post__meta">
+              <span class="post__likes"
+                >Gostos de <strong>joao</strong> e
+                <strong
+                  >outras
+                  <span
+                    class="post__likes-count"
+                    data-base-likes="128"
+                    >128</span
+                  >
+                  pessoas</strong
+                ></span
+              >
+            </div>
+
+            <div class="post__caption">
+              <span class="post__username">ana.travel</span>
+              <span>
+                Track day ao pôr do sol em Lisboa ✨
+                <span class="post__hashtags">#trackday #motorsport #lisboa</span>
+              </span>
+            </div>
+
+            <button class="post__view-comments" aria-label="Ver comentários">
+              Ver todos os 12 comentários
+            </button>
+
+            <time class="post__time" datetime="2026-03-12T18:32:00"
+              >HÁ 2 HORAS</time
+            >
+          </article>
+
+          <!-- Post 2 - Imagem -->
+          <article class="post">
+            <header class="post__header">
+              <div class="post__user">
+                <img
+                  class="post__avatar"
+                  src="Imagens/Foto_5.jpg"
+                  alt="Foto de perfil de cafe.corner"
+                />
+                <div class="post__user-info">
+                  <span class="post__username">cafe.corner</span>
+                  <span class="post__location">Porto, Portugal</span>
+                </div>
+              </div>
+              <button class="icon-button" aria-label="Mais opções">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </header>
+
+            <div class="post__media">
+              <img
+                src="Imagens/Foto_1.jpg"
+                alt="Café latte artístico sobre a mesa"
+              />
+            </div>
+
+            <div class="post__actions">
+              <div class="post__actions-left">
+                <button class="icon-button" aria-label="Gostar">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="icon-button" aria-label="Comentar">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <button class="icon-button" aria-label="Partilhar">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+              <button class="icon-button" aria-label="Guardar publicação">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+
+            <div class="post__meta">
+              <span class="post__likes"
+                >Gostos de <strong>foodie.pt</strong> e
+                <strong
+                  >outras
+                  <span
+                    class="post__likes-count"
+                    data-base-likes="89"
+                    >89</span
+                  >
+                  pessoas</strong
+                ></span
+              >
+            </div>
+
+            <div class="post__caption">
+              <span class="post__username">cafe.corner</span>
+              <span>
+                Coffee break na box entre as corridas ☕️🏁
+                <span class="post__hashtags">#pitstop #racinglife #coffee</span>
+              </span>
+            </div>
+
+            <button class="post__view-comments" aria-label="Ver comentários">
+              Ver todos os 9 comentários
+            </button>
+
+            <time class="post__time" datetime="2026-03-11T16:02:00"
+              >HÁ 1 DIA</time
+            >
+          </article>
+
+          <!-- Post 3 - Carrossel -->
+          <article class="post">
+            <header class="post__header">
+              <div class="post__user">
+                <img
+                  class="post__avatar"
+                  src="Imagens/Foto_2.jpg"
+                  alt="Foto de perfil do carrossel"
+                />
+                <div class="post__user-info">
+                  <span class="post__username">galeria.imagens</span>
+                  <span class="post__location">Coleção de momentos</span>
+                </div>
+              </div>
+              <button class="icon-button" aria-label="Mais opções">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </header>
+
+            <div class="post__media post__media--carousel">
+              <div class="post__carousel" aria-label="Carrossel de imagens">
+                <img src="Imagens/Foto_2.jpg" alt="Imagem 1 do carrossel" />
+                <img src="Imagens/Foto_4.jpg" alt="Imagem 2 do carrossel" />
+                <img src="Imagens/Foto_7.jpg" alt="Imagem 3 do carrossel" />
+                <img src="Imagens/Foto_6.jpg" alt="Imagem 4 do carrossel" />
+                <img src="Imagens/Foto_8.jpg" alt="Imagem 5 do carrossel" />
+              </div>
+              <button
+                class="post__carousel-control post__carousel-control--prev"
+                aria-label="Imagem anterior"
+              >
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button
+                class="post__carousel-control post__carousel-control--next"
+                aria-label="Próxima imagem"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="post__actions">
+              <div class="post__actions-left">
+                <button class="icon-button" aria-label="Gostar">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="icon-button" aria-label="Comentar">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <button class="icon-button" aria-label="Partilhar">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+              <button class="icon-button" aria-label="Guardar publicação">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+
+            <div class="post__meta">
+              <span class="post__likes"
+                >Gostos de <strong>galeria</strong> e
+                <strong
+                  >outras
+                  <span
+                    class="post__likes-count"
+                    data-base-likes="56"
+                    >56</span
+                  >
+                  pessoas</strong
+                ></span
+              >
+            </div>
+
+            <div class="post__caption">
+              <span class="post__username">galeria.imagens</span>
+              <span>
+                Coleção dos melhores momentos nas pistas 📸🏎️
+                <span class="post__hashtags">#races #onboard #speed</span>
+              </span>
+            </div>
+
+            <button class="post__view-comments" aria-label="Ver comentários">
+              Ver todos os 8 comentários
+            </button>
+
+            <time class="post__time" datetime="2026-03-12T12:00:00"
+              >HÁ 3 HORAS</time
+            >
+          </article>
+
+          <!-- Post 4 - Imagem extra -->
+          <article class="post">
+            <header class="post__header">
+              <div class="post__user">
+                <img
+                  class="post__avatar"
+                  src="Imagens/Foto_5.jpg"
+                  alt="Foto de perfil de sunset.gallery"
+                />
+                <div class="post__user-info">
+                  <span class="post__username">sunset.gallery</span>
+                  <span class="post__location">Praia ao entardecer</span>
+                </div>
+              </div>
+              <button class="icon-button" aria-label="Mais opções">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </header>
+
+            <div class="post__media">
+              <img
+                src="Imagens/Foto_5.jpg"
+                alt="Nova publicação com a Foto 5"
+              />
+            </div>
+
+            <div class="post__actions">
+              <div class="post__actions-left">
+                <button class="icon-button" aria-label="Gostar">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="icon-button" aria-label="Comentar">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <button class="icon-button" aria-label="Partilhar">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+              <button class="icon-button" aria-label="Guardar publicação">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+
+            <div class="post__meta">
+              <span class="post__likes"
+                >Gostos de <strong>landscape.pt</strong> e
+                <strong
+                  >outras
+                  <span
+                    class="post__likes-count"
+                    data-base-likes="210"
+                    >210</span
+                  >
+                  pessoas</strong
+                ></span
+              >
+            </div>
+
+            <div class="post__caption">
+              <span class="post__username">sunset.gallery</span>
+              <span>
+                Grid alinhado para a largada ao entardecer 🌅🏁
+                <span class="post__hashtags">#gridstart #raceweekend #sunset</span>
+              </span>
+            </div>
+
+            <button class="post__view-comments" aria-label="Ver comentários">
+              Ver todos os 18 comentários
+            </button>
+
+            <time class="post__time" datetime="2026-03-10T19:45:00"
+              >HÁ 3 DIAS</time
+            >
+          </article>
+
+          <!-- Post 5 - VÍDEO (obrigatório) -->
+          <article class="post">
+            <header class="post__header">
+              <div class="post__user">
+                <img
+                  class="post__avatar"
+                  src="Imagens/Foto_4.jpg"
+                  alt="Foto de perfil de move.fit"
+                />
+                <div class="post__user-info">
+                  <span class="post__username">move.fit</span>
+                  <span class="post__location">Ginásio Downtown</span>
+                </div>
+              </div>
+              <button class="icon-button" aria-label="Mais opções">
+                <i class="fa-solid fa-ellipsis"></i>
+              </button>
+            </header>
+
+            <div class="post__media post__media--video">
+              <video
+                src="Videos/videoplayback_1.mp4"
+                controls
+                loop
+                muted
+                playsinline
+              ></video>
+              <div class="post__video-icon">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+
+            <div class="post__actions">
+              <div class="post__actions-left">
+                <button class="icon-button" aria-label="Gostar">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="icon-button" aria-label="Comentar">
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <button class="icon-button" aria-label="Partilhar">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </div>
+              <button class="icon-button" aria-label="Guardar publicação">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+
+            <div class="post__meta">
+              <span class="post__likes"
+                >Gostos de <strong>fit.life</strong> e
+                <strong
+                  >outras
+                  <span
+                    class="post__likes-count"
+                    data-base-likes="342"
+                    >342</span
+                  >
+                  pessoas</strong
+                ></span
+              >
+            </div>
+
+            <div class="post__caption">
+              <span class="post__username">move.fit</span>
+              <span>
+                Voltas rápidas para aquecer os pneus antes da corrida 💪🏎️
+                <span class="post__hashtags">#hotlap #timelapse #raceprep</span>
+              </span>
+            </div>
+
+            <button class="post__view-comments" aria-label="Ver comentários">
+              Ver todos os 45 comentários
+            </button>
+
+            <time class="post__time" datetime="2026-03-12T07:15:00"
+              >HÁ 5 HORAS</time
+            >
+          </article>
+        </section>
+
+        <!-- Coluna lateral (sugestões) só para efeito visual de desktop -->
+        <aside class="sidebar" aria-label="Sugestões de perfis">
+          <div class="sidebar__profile">
+            <img
+              class="sidebar__avatar"
+              src="Imagens/Foto_2.jpg"
+              alt="Perfil principal"
+            />
+            <div>
+              <span class="sidebar__username">Gabriel_Xavier</span>
+              <span class="sidebar__name">Piloto Gabriel Xavier</span>
+            </div>
+            <button class="sidebar__switch">Mudar</button>
+          </div>
+
+          <div class="sidebar__section">
+            <div class="sidebar__section-header">
+              <span> Sugestões para você </span>
+              <button class="sidebar__see-all">Ver tudo</button>
+            </div>
+
+            <ul class="sidebar__suggestions">
+              <li class="sidebar__suggestion">
+                <div class="sidebar__suggestion-user">
+                  <img
+                    src="Imagens/Foto_3.jpg"
+                    alt="Sugestão 1"
+                  />
+                  <div>
+                    <span class="sidebar__username">nature.photos</span>
+                    <span class="sidebar__info">Segue-te</span>
+                  </div>
+                </div>
+                <button class="sidebar__follow">Seguir</button>
+              </li>
+              <li class="sidebar__suggestion">
+                <div class="sidebar__suggestion-user">
+                  <img
+                    src="Imagens/Foto_4.jpg"
+                    alt="Sugestão 2"
+                  />
+                  <div>
+                    <span class="sidebar__username">design.studio</span>
+                    <span class="sidebar__info">Novo no Instagram</span>
+                  </div>
+                </div>
+                <button class="sidebar__follow">Seguir</button>
+              </li>
+              <li class="sidebar__suggestion">
+                <div class="sidebar__suggestion-user">
+                  <img
+                    src="Imagens/Foto_5.jpg"
+                    alt="Sugestão 3"
+                  />
+                  <div>
+                    <span class="sidebar__username">city.lights.nyc</span>
+                    <span class="sidebar__info">Seguido por amigos</span>
+                  </div>
+                </div>
+                <button class="sidebar__follow">Seguir</button>
+              </li>
+              <li class="sidebar__suggestion">
+                <div class="sidebar__suggestion-user">
+                  <img
+                    src="Imagens/Foto_1.jpg"
+                    alt="Sugestão 4"
+                  />
+                  <div>
+                    <span class="sidebar__username">world.travel.spots</span>
+                    <span class="sidebar__info">Popular no Instagram</span>
+                  </div>
+                </div>
+                <button class="sidebar__follow">Seguir</button>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script>
+      (function () {
+        const carouselContainer = document.querySelector(
+          ".post__media--carousel .post__carousel"
+        );
+        const prevBtn = document.querySelector(
+          ".post__carousel-control--prev"
+        );
+        const nextBtn = document.querySelector(
+          ".post__carousel-control--next"
+        );
+
+        if (!carouselContainer || !prevBtn || !nextBtn) return;
+
+        const getSlideWidth = () => carouselContainer.clientWidth || 0;
+
+        prevBtn.addEventListener("click", () => {
+          carouselContainer.scrollBy({
+            left: -getSlideWidth(),
+            behavior: "smooth",
+          });
+        });
+
+        nextBtn.addEventListener("click", () => {
+          carouselContainer.scrollBy({
+            left: getSlideWidth(),
+            behavior: "smooth",
+          });
+        });
+      })();
+
+      (function () {
+        const updateLikeIcon = (btn) => {
+          const icon = btn.querySelector("i");
+          if (!icon) return;
+          if (btn.classList.contains("is-liked")) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+          } else {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+          }
+        };
+
+        const likeButtons = document.querySelectorAll(
+          '.post .icon-button[aria-label="Gostar"]'
+        );
+
+        likeButtons.forEach((btn) => {
+          btn.classList.add("icon-button--like");
+          btn.addEventListener("click", () => {
+            btn.classList.toggle("is-liked");
+            updateLikeIcon(btn);
+
+            const post = btn.closest(".post");
+            if (!post) return;
+            const likesCountEl = post.querySelector(".post__likes-count");
+            if (!likesCountEl) return;
+            const baseLikes =
+              parseInt(likesCountEl.dataset.baseLikes || "0", 10) || 0;
+            likesCountEl.textContent = btn.classList.contains("is-liked")
+              ? baseLikes + 1
+              : baseLikes;
+          });
+        });
+
+        const saveButtons = document.querySelectorAll(
+          '.post .icon-button[aria-label="Guardar publicação"]'
+        );
+
+        saveButtons.forEach((btn) => {
+          btn.classList.add("icon-button--save");
+          btn.addEventListener("click", () => {
+            btn.classList.toggle("is-saved");
+            const icon = btn.querySelector("i");
+            if (!icon) return;
+            if (btn.classList.contains("is-saved")) {
+              icon.classList.remove("fa-regular");
+              icon.classList.add("fa-solid");
+            } else {
+              icon.classList.remove("fa-solid");
+              icon.classList.add("fa-regular");
+            }
+          });
+        });
+
+        const posts = document.querySelectorAll(".post");
+
+        posts.forEach((post) => {
+          const media = post.querySelector(".post__media, .post__media--video");
+          const likeButton = post.querySelector(
+            '.icon-button[aria-label="Gostar"]'
+          );
+          if (!media || !likeButton) return;
+          const likesCountEl = post.querySelector(".post__likes-count");
+
+          media.addEventListener("dblclick", () => {
+            likeButton.classList.add("is-liked");
+            updateLikeIcon(likeButton);
+
+            if (likesCountEl) {
+              const baseLikes =
+                parseInt(likesCountEl.dataset.baseLikes || "0", 10) || 0;
+              likesCountEl.textContent = baseLikes + 1;
+            }
+
+            const overlay = document.createElement("div");
+            overlay.className = "like-heart-overlay";
+            overlay.innerHTML = '<i class="fa-solid fa-heart"></i>';
+            media.appendChild(overlay);
+
+            setTimeout(() => {
+              overlay.remove();
+            }, 900);
+          });
+
+          // Comentários por post
+          const commentsWrapper = document.createElement("div");
+          commentsWrapper.className = "post__comments";
+          commentsWrapper.innerHTML = `
+            <div class="post__comments-list"></div>
+            <form class="post__comment-form">
+              <input
+                type="text"
+                class="post__comment-input"
+                placeholder="Adicionar um comentário..."
+                aria-label="Adicionar um comentário"
+              />
+              <button type="submit" class="post__comment-submit">Publicar</button>
+            </form>
+          `;
+          post.appendChild(commentsWrapper);
+
+          const commentsList = commentsWrapper.querySelector(
+            ".post__comments-list"
+          );
+          const commentForm = commentsWrapper.querySelector(
+            ".post__comment-form"
+          );
+          const commentInput = commentsWrapper.querySelector(
+            ".post__comment-input"
+          );
+
+          const toggleButtons = post.querySelectorAll(
+            '.icon-button[aria-label="Comentar"], .post__view-comments'
+          );
+
+          toggleButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              commentsWrapper.classList.toggle("is-visible");
+              if (commentsWrapper.classList.contains("is-visible")) {
+                commentInput.focus();
+              }
+            });
+          });
+
+          commentForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const text = commentInput.value.trim();
+            if (!text) return;
+
+            const commentEl = document.createElement("div");
+            commentEl.className = "post__comment";
+            commentEl.innerHTML = `
+              <span class="post__comment-username">Gabriel_Xavier</span>
+              <span class="post__comment-text">${text}</span>
+            `;
+            commentsList.appendChild(commentEl);
+            commentInput.value = "";
+          });
+        });
+      })();
+
+      // Pesquisa de perfis (barra de busca)
+      (function () {
+        const searchInput = document.getElementById("navbar-search-input");
+        const resultsContainer = document.getElementById(
+          "navbar-search-results"
+        );
+
+        if (!searchInput || !resultsContainer) return;
+
+        const profiles = [
+          {
+            username: "Gabriel_Xavier",
+            name: "Piloto Gabriel Xavier",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "ana.travel",
+            name: "Lisboa, Portugal",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "cafe.corner",
+            name: "Porto, Portugal",
+            avatar: "Imagens/Foto_5.jpg",
+          },
+          {
+            username: "galeria.imagens",
+            name: "Coleção de momentos",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "move.fit",
+            name: "Ginásio Downtown",
+            avatar: "Imagens/Foto_4.jpg",
+          },
+          {
+            username: "nature.photos",
+            name: "Sugestão para ti",
+            avatar: "Imagens/Foto_3.jpg",
+          },
+          {
+            username: "design.studio",
+            name: "Novo no Instagram",
+            avatar: "Imagens/Foto_4.jpg",
+          },
+          {
+            username: "city.lights.nyc",
+            name: "Seguido por amigos",
+            avatar: "Imagens/Foto_5.jpg",
+          },
+          {
+            username: "sunset.gallery",
+            name: "Praia ao entardecer",
+            avatar: "Imagens/Foto_5.jpg",
+          },
+          {
+            username: "world.travel.spots",
+            name: "Popular no Instagram",
+            avatar: "Imagens/Foto_1.jpg",
+          },
+        ];
+
+        const renderResults = (items) => {
+          if (!items.length) {
+            resultsContainer.classList.remove("is-visible");
+            resultsContainer.innerHTML = "";
+            return;
+          }
+
+          resultsContainer.innerHTML = items
+            .map(
+              (p) => `
+              <button class="navbar__search-result-item" type="button" data-username="${p.username}">
+                <img src="${p.avatar}" alt="Avatar de ${p.username}" class="navbar__search-result-avatar" />
+                <div>
+                  <div class="navbar__search-result-username">${p.username}</div>
+                  <div class="navbar__search-result-info">${p.name}</div>
+                </div>
+              </button>
+            `
+            )
+            .join("");
+
+          resultsContainer.classList.add("is-visible");
+        };
+
+        searchInput.addEventListener("input", () => {
+          const query = searchInput.value.trim().toLowerCase();
+          if (query.length < 2) {
+            resultsContainer.classList.remove("is-visible");
+            resultsContainer.innerHTML = "";
+            return;
+          }
+
+          const matches = profiles.filter((p) => {
+            return (
+              p.username.toLowerCase().includes(query) ||
+              p.name.toLowerCase().includes(query)
+            );
+          });
+
+          renderResults(matches);
+        });
+
+        resultsContainer.addEventListener("click", (event) => {
+          const item = event.target.closest(".navbar__search-result-item");
+          if (!item) return;
+          const username = item.getAttribute("data-username");
+          if (username) {
+            searchInput.value = username;
+          }
+          resultsContainer.classList.remove("is-visible");
+          resultsContainer.innerHTML = "";
+        });
+
+        document.addEventListener("click", (event) => {
+          const insideSearch =
+            searchInput.contains(event.target) ||
+            resultsContainer.contains(event.target);
+          if (!insideSearch) {
+            resultsContainer.classList.remove("is-visible");
+          }
+        });
+      })();
+
+      // Seguir/Deixar de seguir perfis sugeridos (sidebar)
+      (function () {
+        const followButtons = document.querySelectorAll(".sidebar__follow");
+        if (!followButtons.length) return;
+
+        followButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const isFollowing = btn.classList.toggle("is-following");
+            btn.textContent = isFollowing ? "Seguindo" : "Seguir";
+          });
+        });
+      })();
+
+      // Ver tudo nas sugestões (modal para seguir)
+      (function () {
+        const seeAllBtn = document.querySelector(".sidebar__see-all");
+        if (!seeAllBtn) return;
+
+        let backdrop = document.querySelector(
+          ".share-modal-backdrop.suggestions-backdrop"
+        );
+
+        if (!backdrop) {
+          backdrop = document.createElement("div");
+          backdrop.className = "share-modal-backdrop suggestions-backdrop";
+          backdrop.innerHTML = `
+            <div class="share-modal" role="dialog" aria-modal="true" aria-label="Sugestões para seguir">
+              <div class="share-modal__header">
+                <span class="share-modal__title">Sugestões para seguir</span>
+                <button class="share-modal__close" aria-label="Fechar">&times;</button>
+              </div>
+              <div class="share-modal__list"></div>
+              <div class="share-modal__footer">
+                Toca em seguir para acompanhar mais perfis.
+              </div>
+            </div>
+          `;
+          document.body.appendChild(backdrop);
+        }
+
+        const listEl = backdrop.querySelector(".share-modal__list");
+        const closeBtn = backdrop.querySelector(".share-modal__close");
+
+        const profiles = [
+          {
+            username: "nature.photos",
+            info: "Fotografia de natureza",
+            avatar: "Imagens/Foto_3.jpg",
+          },
+          {
+            username: "design.studio",
+            info: "Inspiração de design diário",
+            avatar: "Imagens/Foto_4.jpg",
+          },
+          {
+            username: "city.lights.nyc",
+            info: "Noites na cidade",
+            avatar: "Imagens/Foto_5.jpg",
+          },
+          {
+            username: "world.travel.spots",
+            info: "Destinos pelo mundo",
+            avatar: "Imagens/Foto_1.jpg",
+          },
+        ];
+
+        const renderList = () => {
+          listEl.innerHTML = profiles
+            .map(
+              (p) => `
+            <div class="share-modal__user" data-username="${p.username}">
+              <div class="share-modal__user-main">
+                <img src="${p.avatar}" alt="Avatar de ${p.username}" class="share-modal__avatar" />
+                <div>
+                  <div class="share-modal__username">${p.username}</div>
+                  <div class="share-modal__info">${p.info}</div>
+                </div>
+              </div>
+              <button type="button" class="share-modal__send-btn share-modal__follow-btn">Seguir</button>
+            </div>
+          `
+            )
+            .join("");
+        };
+
+        const openModal = () => {
+          renderList();
+          backdrop.classList.add("is-visible");
+        };
+
+        const closeModal = () => {
+          backdrop.classList.remove("is-visible");
+        };
+
+        seeAllBtn.addEventListener("click", () => {
+          openModal();
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", closeModal);
+        }
+
+        backdrop.addEventListener("click", (event) => {
+          const modal = backdrop.querySelector(".share-modal");
+          if (!modal.contains(event.target)) {
+            closeModal();
+          }
+        });
+
+        listEl.addEventListener("click", (event) => {
+          const followBtn = event.target.closest(".share-modal__follow-btn");
+          if (!followBtn) return;
+          const isFollowing = followBtn.classList.toggle("is-following");
+          followBtn.textContent = isFollowing ? "Seguindo" : "Seguir";
+          followBtn.style.color = isFollowing ? "#262626" : "#0095f6";
+        });
+      })();
+
+      // Partilhar publicação (modal simples)
+      (function () {
+        const shareButtons = document.querySelectorAll(
+          '.post .icon-button[aria-label="Partilhar"], .navbar__icons .icon-button[aria-label="Mensagens"]'
+        );
+        if (!shareButtons.length) return;
+
+        const backdrop = document.createElement("div");
+        backdrop.className = "share-modal-backdrop";
+        backdrop.innerHTML = `
+          <div class="share-modal" role="dialog" aria-modal="true" aria-label="Partilhar publicação">
+            <div class="share-modal__header">
+              <span class="share-modal__title">Partilhar publicação</span>
+              <button class="share-modal__close" aria-label="Fechar">&times;</button>
+            </div>
+            <div class="share-modal__list"></div>
+            <div class="share-modal__footer">
+              Seleciona um perfil para enviar.
+            </div>
+          </div>
+        `;
+        document.body.appendChild(backdrop);
+
+        const listEl = backdrop.querySelector(".share-modal__list");
+        const closeBtn = backdrop.querySelector(".share-modal__close");
+
+        const profiles = [
+          {
+            username: "Gabriel_Xavier",
+            info: "Tu",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "ana.travel",
+            info: "Segue-te",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "cafe.corner",
+            info: "Seguido por amigos",
+            avatar: "Imagens/Foto_5.jpg",
+          },
+          {
+            username: "move.fit",
+            info: "Mais interações",
+            avatar: "Imagens/Foto_4.jpg",
+          },
+          {
+            username: "world.travel.spots",
+            info: "Sugestões para você",
+            avatar: "Imagens/Foto_1.jpg",
+          },
+        ];
+
+        const renderShareList = () => {
+          listEl.innerHTML = profiles
+            .map(
+              (p) => `
+            <div class="share-modal__user" data-username="${p.username}">
+              <div class="share-modal__user-main">
+                <img src="${p.avatar}" alt="Avatar de ${p.username}" class="share-modal__avatar" />
+                <div>
+                  <div class="share-modal__username">${p.username}</div>
+                  <div class="share-modal__info">${p.info}</div>
+                </div>
+              </div>
+              <button type="button" class="share-modal__send-btn">Enviar</button>
+            </div>
+          `
+            )
+            .join("");
+        };
+
+        const openModal = () => {
+          renderShareList();
+          backdrop.classList.add("is-visible");
+        };
+
+        const closeModal = () => {
+          backdrop.classList.remove("is-visible");
+        };
+
+        shareButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            openModal();
+          });
+        });
+
+        closeBtn.addEventListener("click", closeModal);
+
+        backdrop.addEventListener("click", (event) => {
+          const modal = backdrop.querySelector(".share-modal");
+          if (!modal.contains(event.target)) {
+            closeModal();
+          }
+        });
+
+        listEl.addEventListener("click", (event) => {
+          const sendBtn = event.target.closest(".share-modal__send-btn");
+          if (!sendBtn) return;
+          const userEl = sendBtn.closest(".share-modal__user");
+          const username = userEl.getAttribute("data-username");
+          sendBtn.textContent = "Enviado";
+          sendBtn.style.color = "#8e8e8e";
+          setTimeout(() => {
+            closeModal();
+          }, 600);
+        });
+      })();
+    </script>
+  </body>
+</html>
+

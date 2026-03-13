@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reels • Instagram</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="reels-body">
+    <header class="navbar navbar--reels">
+      <div class="navbar__content">
+        <div class="navbar__logo">
+          <i class="fa-brands fa-instagram navbar__logo-icon" aria-hidden="true"></i>
+          <span class="logo-text">Instagram</span>
+        </div>
+        <nav class="navbar__icons" aria-label="Navegação Reels">
+          <a href="index.html" class="icon-button" aria-label="Voltar ao feed">
+            <i class="fa-solid fa-house"></i>
+          </a>
+          <span class="reels-label">
+            <i class="fa-solid fa-clapperboard"></i> Reels
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <main class="reels-container" aria-label="Reels">
+      <!-- Cada .reel é uma "tela" inteira que o utilizador pode rolar -->
+      <section class="reel">
+        <div class="reel__video-wrapper">
+          <video
+            class="reel__video"
+            src="Videos/videoplayback_1.mp4"
+            loop
+            muted
+            playsinline
+          ></video>
+          <button class="reel__mute-toggle" aria-label="Ativar/desativar som">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+        </div>
+        <div class="reel__overlay">
+          <div class="reel__info">
+            <div class="reel__user">
+              <img
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=80"
+                alt="Perfil do criador"
+              />
+              <span class="reel__username">move.fit</span>
+              <button class="reel__follow">Seguir</button>
+            </div>
+            <p class="reel__caption">
+              Aquecendo os pneus para a próxima volta rápida 💥🏎️
+            </p>
+          </div>
+          <div class="reel__actions">
+            <button class="icon-button" aria-label="Gostar">
+              <i class="fa-regular fa-heart"></i>
+              <span>3,2 K</span>
+            </button>
+            <button class="icon-button" aria-label="Comentar">
+              <i class="fa-regular fa-comment"></i>
+              <span>120</span>
+            </button>
+            <button class="icon-button" aria-label="Partilhar">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <button class="icon-button" aria-label="Mais opções">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reel">
+        <div class="reel__video-wrapper">
+          <video
+            class="reel__video"
+            src="Videos/videoplayback_2.mp4"
+            loop
+            muted
+            playsinline
+          ></video>
+          <button class="reel__mute-toggle" aria-label="Ativar/desativar som">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+        </div>
+        <div class="reel__overlay">
+          <div class="reel__info">
+            <div class="reel__user">
+              <img
+                src="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=80"
+                alt="Perfil do criador"
+              />
+              <span class="reel__username">city.lights</span>
+              <button class="reel__follow">Seguir</button>
+            </div>
+            <p class="reel__caption">
+              Noite de corridas sob as luzes da cidade ✨🏁
+            </p>
+          </div>
+          <div class="reel__actions">
+            <button class="icon-button" aria-label="Gostar">
+              <i class="fa-regular fa-heart"></i>
+              <span>1,8 K</span>
+            </button>
+            <button class="icon-button" aria-label="Comentar">
+              <i class="fa-regular fa-comment"></i>
+              <span>89</span>
+            </button>
+            <button class="icon-button" aria-label="Partilhar">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <button class="icon-button" aria-label="Mais opções">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reel">
+        <div class="reel__video-wrapper">
+          <video
+            class="reel__video"
+            src="Videos/videoplayback_1.mp4"
+            loop
+            muted
+            playsinline
+          ></video>
+          <button class="reel__mute-toggle" aria-label="Ativar/desativar som">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+        </div>
+        <div class="reel__overlay">
+          <div class="reel__info">
+            <div class="reel__user">
+              <img
+                src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=80"
+                alt="Perfil do criador"
+              />
+              <span class="reel__username">cafe.corner</span>
+              <button class="reel__follow">Seguir</button>
+            </div>
+            <p class="reel__caption">
+              Ajustando detalhes no carro entre as voltas ☕️🔧
+            </p>
+          </div>
+          <div class="reel__actions">
+            <button class="icon-button" aria-label="Gostar">
+              <i class="fa-regular fa-heart"></i>
+              <span>980</span>
+            </button>
+            <button class="icon-button" aria-label="Comentar">
+              <i class="fa-regular fa-comment"></i>
+              <span>34</span>
+            </button>
+            <button class="icon-button" aria-label="Partilhar">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <button class="icon-button" aria-label="Mais opções">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reel">
+        <div class="reel__video-wrapper">
+          <video
+            class="reel__video"
+            src="Videos/videoplayback_2.mp4"
+            loop
+            muted
+            playsinline
+          ></video>
+          <button class="reel__mute-toggle" aria-label="Ativar/desativar som">
+            <i class="fa-solid fa-volume-xmark"></i>
+          </button>
+        </div>
+        <div class="reel__overlay">
+          <div class="reel__info">
+            <div class="reel__user">
+              <img
+                src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=80"
+                alt="Perfil do criador"
+              />
+              <span class="reel__username">travel.vibes</span>
+              <button class="reel__follow">Seguir</button>
+            </div>
+            <p class="reel__caption">
+              Acelerando forte à beira-mar 🌊🏎️
+            </p>
+          </div>
+          <div class="reel__actions">
+            <button class="icon-button" aria-label="Gostar">
+              <i class="fa-regular fa-heart"></i>
+              <span>5,4 K</span>
+            </button>
+            <button class="icon-button" aria-label="Comentar">
+              <i class="fa-regular fa-comment"></i>
+              <span>210</span>
+            </button>
+            <button class="icon-button" aria-label="Partilhar">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <button class="icon-button" aria-label="Mais opções">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Snap vertical e controle de reprodução dos vídeos como no Reels
+      const reels = document.querySelectorAll(".reel");
+      const options = {
+        threshold: 0.6,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target.querySelector(".reel__video");
+          if (!video) return;
+
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, options);
+
+      reels.forEach((reel) => observer.observe(reel));
+
+      // Botão de som (mute/unmute) por reel
+      document.querySelectorAll(".reel").forEach((reel) => {
+        const video = reel.querySelector(".reel__video");
+        const toggle = reel.querySelector(".reel__mute-toggle");
+        if (!video || !toggle) return;
+
+        toggle.addEventListener("click", () => {
+          video.muted = !video.muted;
+          const icon = toggle.querySelector("i");
+          if (video.muted) {
+            icon.classList.remove("fa-volume-high");
+            icon.classList.add("fa-volume-xmark");
+          } else {
+            icon.classList.remove("fa-volume-xmark");
+            icon.classList.add("fa-volume-high");
+          }
+        });
+      });
+
+      // Curtidas nos Reels (coração e animação)
+      document.querySelectorAll(".reel").forEach((reel) => {
+        const likeButton = reel.querySelector(
+          '.icon-button[aria-label="Gostar"]'
+        );
+        const videoWrapper = reel.querySelector(".reel__video-wrapper");
+        if (!likeButton || !videoWrapper) return;
+
+        const updateLikeIcon = (btn) => {
+          const icon = btn.querySelector("i");
+          if (!icon) return;
+          if (btn.classList.contains("is-liked")) {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+          } else {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+          }
+        };
+
+        likeButton.classList.add("icon-button--like");
+        likeButton.addEventListener("click", () => {
+          likeButton.classList.toggle("is-liked");
+          updateLikeIcon(likeButton);
+        });
+
+        videoWrapper.addEventListener("dblclick", () => {
+          likeButton.classList.add("is-liked");
+          updateLikeIcon(likeButton);
+
+          const overlay = document.createElement("div");
+          overlay.className = "like-heart-overlay reels";
+          overlay.innerHTML = '<i class="fa-solid fa-heart"></i>';
+          videoWrapper.appendChild(overlay);
+
+          setTimeout(() => {
+            overlay.remove();
+          }, 900);
+        });
+
+        // Comentários por reel
+        const overlay = reel.querySelector(".reel__overlay");
+        const actions = reel.querySelector(".reel__actions");
+        const commentButton = reel.querySelector(
+          '.icon-button[aria-label="Comentar"]'
+        );
+        if (!overlay || !actions || !commentButton) return;
+
+        const commentsPanel = document.createElement("div");
+        commentsPanel.className = "reel__comments-panel";
+        commentsPanel.innerHTML = `
+          <div class="reel__comments-list"></div>
+          <form class="reel__comment-form">
+            <input
+              type="text"
+              class="reel__comment-input"
+              placeholder="Adicionar um comentário..."
+              aria-label="Adicionar um comentário no Reels"
+            />
+            <button type="submit" class="reel__comment-submit">Publicar</button>
+          </form>
+        `;
+        overlay.appendChild(commentsPanel);
+
+        const commentsList = commentsPanel.querySelector(
+          ".reel__comments-list"
+        );
+        const commentForm = commentsPanel.querySelector(".reel__comment-form");
+        const commentInput = commentsPanel.querySelector(
+          ".reel__comment-input"
+        );
+
+        commentButton.addEventListener("click", () => {
+          commentsPanel.classList.toggle("is-visible");
+          if (commentsPanel.classList.contains("is-visible")) {
+            commentInput.focus();
+          }
+        });
+
+        commentForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const text = commentInput.value.trim();
+          if (!text) return;
+
+          const commentEl = document.createElement("div");
+          commentEl.className = "reel__comment";
+          commentEl.innerHTML = `
+            <span class="reel__comment-username">Gabriel_Xavier</span>
+            <span class="reel__comment-text">${text}</span>
+          `;
+          commentsList.appendChild(commentEl);
+          commentInput.value = "";
+        });
+      });
+
+      // Partilhar Reels (usa o mesmo modal visual que o feed)
+      (function () {
+        const shareButtons = document.querySelectorAll(
+          '.reel .icon-button[aria-label="Partilhar"]'
+        );
+        if (!shareButtons.length) return;
+
+        let backdrop = document.querySelector(".share-modal-backdrop");
+
+        if (!backdrop) {
+          backdrop = document.createElement("div");
+          backdrop.className = "share-modal-backdrop";
+          backdrop.innerHTML = `
+            <div class="share-modal" role="dialog" aria-modal="true" aria-label="Partilhar publicação">
+              <div class="share-modal__header">
+                <span class="share-modal__title">Partilhar Reels</span>
+                <button class="share-modal__close" aria-label="Fechar">&times;</button>
+              </div>
+              <div class="share-modal__list"></div>
+              <div class="share-modal__footer">
+                Seleciona um perfil para enviar.
+              </div>
+            </div>
+          `;
+          document.body.appendChild(backdrop);
+        }
+
+        const listEl = backdrop.querySelector(".share-modal__list");
+        const closeBtn = backdrop.querySelector(".share-modal__close");
+
+        const profiles = [
+          {
+            username: "Gabriel_Xavier",
+            info: "Tu",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "ana.travel",
+            info: "Segue-te",
+            avatar: "Imagens/Foto_2.jpg",
+          },
+          {
+            username: "move.fit",
+            info: "Mais interações",
+            avatar: "Imagens/Foto_4.jpg",
+          },
+          {
+            username: "city.lights.nyc",
+            info: "Seguido por amigos",
+            avatar: "Imagens/Foto_5.jpg",
+          },
+        ];
+
+        const renderShareList = () => {
+          listEl.innerHTML = profiles
+            .map(
+              (p) => `
+            <div class="share-modal__user" data-username="${p.username}">
+              <div class="share-modal__user-main">
+                <img src="${p.avatar}" alt="Avatar de ${p.username}" class="share-modal__avatar" />
+                <div>
+                  <div class="share-modal__username">${p.username}</div>
+                  <div class="share-modal__info">${p.info}</div>
+                </div>
+              </div>
+              <button type="button" class="share-modal__send-btn">Enviar</button>
+            </div>
+          `
+            )
+            .join("");
+        };
+
+        const openModal = () => {
+          renderShareList();
+          backdrop.classList.add("is-visible");
+        };
+
+        const closeModal = () => {
+          backdrop.classList.remove("is-visible");
+        };
+
+        shareButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            openModal();
+          });
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", closeModal);
+        }
+
+        backdrop.addEventListener("click", (event) => {
+          const modal = backdrop.querySelector(".share-modal");
+          if (!modal.contains(event.target)) {
+            closeModal();
+          }
+        });
+
+        listEl.addEventListener("click", (event) => {
+          const sendBtn = event.target.closest(".share-modal__send-btn");
+          if (!sendBtn) return;
+          sendBtn.textContent = "Enviado";
+          sendBtn.style.color = "#8e8e8e";
+          setTimeout(() => {
+            closeModal();
+          }, 600);
+        });
+      })();
+    </script>
+  </body>
+</html>
+
