@@ -1,0 +1,382 @@
+/* ============================================================
+   VARIÁVEIS GLOBAIS CSS (Custom Properties)
+
+   :root é o elemento raiz do documento (equivale ao <html>).
+   Definir variáveis aqui permite reutilizá-las em qualquer lugar
+   do CSS usando var(--nome-da-variavel).
+
+   Vantagem: se precisar mudar uma cor, muda só aqui.
+   ============================================================ */
+:root {
+  --low:    #28a745; /* Verde  → prioridade Baixa  */
+  --medium: #ffc107; /* Amarelo → prioridade Média  */
+  --high:   #dc3545; /* Vermelho → prioridade Alta  */
+}
+
+/* ============================================================
+   RESET GLOBAL
+
+   O seletor * aplica a regra a TODOS os elementos da página.
+   box-sizing: border-box faz com que padding e border sejam
+   incluídos na largura/altura do elemento — evita que elementos
+   "transbordem" do layout.
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos base da página inteira */
+body {
+  margin: 0;                        /* Remove a margem padrão do navegador */
+  background: #f0f2f5;              /* Fundo cinza claro atrás da aplicação */
+  font-family: system-ui, sans-serif; /* Usa a fonte nativa do sistema operacional */
+}
+
+/* ============================================================
+   CONTAINER PRINCIPAL
+
+   Limita a largura máxima e centraliza o conteúdo na tela.
+   margin: 2rem auto → 2rem no topo/base, "auto" centraliza horizontalmente.
+   ============================================================ */
+.app-container {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem; /* Espaçamento lateral para não colar nas bordas em telas pequenas */
+}
+
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: #666; /* Texto secundário em cinza */
+}
+
+
+/* ============================================================
+   FORMULÁRIO DE CRIAÇÃO DE TAREFAS
+
+   display: flex → alinha os filhos (input, select, button) em linha
+   flex-wrap: wrap → em telas pequenas, os itens quebram para a próxima linha
+   ============================================================ */
+.form-section form {
+  display: flex;
+  gap: 10px;           /* Espaço entre os elementos filhos */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;  /* Bordas arredondadas */
+  /* box-shadow cria uma sombra suave: deslocamento X Y, desfoque, cor */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+}
+
+/* Campo de texto do formulário */
+.form-section input {
+  flex: 3;          /* Ocupa 3 "partes" do espaço disponível (3x mais que o select) */
+  min-width: 160px; /* Largura mínima antes de quebrar linha */
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Select de prioridade */
+.form-section select {
+  flex: 1;          /* Ocupa 1 "parte" do espaço disponível */
+  min-width: 100px;
+  padding: 10px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Botão "Criar" — selecionado pelo atributo type='submit' */
+.form-section button[type='submit'] {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;              /* Muda o cursor para "mãozinha" ao passar */
+  transition: background 0.2s; /* Animação suave na mudança de cor */
+}
+
+/* Efeito hover: clareia o botão ao passar o mouse */
+.form-section button[type='submit']:hover {
+  background: #555;
+}
+
+
+/* ============================================================
+   CAMPO DE BUSCA EM TEMPO REAL
+   ============================================================ */
+.search-section {
+  margin: 16px 0 0;
+}
+
+.search-input {
+  width: 100%;      /* Ocupa toda a largura disponível */
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Quando o campo está em foco (clicado pelo usuário) */
+.search-input:focus {
+  outline: none;         /* Remove o outline padrão do navegador */
+  border-color: #333;    /* Substitui por uma borda escura personalizada */
+}
+
+
+/* ============================================================
+   FILTROS DE STATUS (Todas / Pendentes / Concluídas)
+
+   justify-content: center → centraliza os botões horizontalmente
+   ============================================================ */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Estilo base de cada botão de filtro */
+.filter-section button {
+  padding: 7px 18px;
+  border: 1px solid #ccc;
+  border-radius: 20px;   /* Bordas bem arredondadas = visual de "pílula" */
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s; /* Transição suave no hover */
+}
+
+.filter-section button:hover {
+  background: #e9ecef;
+}
+
+/* Classe "active" é adicionada via JavaScript ao botão selecionado */
+.filter-section button.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+
+/* ============================================================
+   GRADE DE TAREFAS (CSS Grid)
+
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+     - auto-fill: cria quantas colunas couberem na linha
+     - minmax(250px, 1fr): cada coluna tem no mínimo 250px e no máximo 1 fração
+     Resultado: em telas grandes, 3 colunas; em telas médias, 2; em pequenas, 1.
+   ============================================================ */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px; /* Espaço entre os cards */
+}
+
+/* Mensagem exibida quando a lista está vazia */
+.empty-msg {
+  /* grid-column: 1 / -1 faz o elemento ocupar TODAS as colunas do grid */
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  font-size: 0.95rem;
+  margin: 2rem 0;
+}
+
+
+/* ============================================================
+   CARD DE TAREFA
+
+   display: flex + flex-direction: column → empilha conteúdo e ações
+   justify-content: space-between → empurra os botões para o rodapé do card
+   ============================================================ */
+.task-card {
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 8px solid #ccc; /* Borda colorida à esquerda (cor sobrescrita pelas classes abaixo) */
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 0.2s; /* Transição suave ao tornar-se "done" */
+}
+
+/* ── ESTILIZAÇÃO CONDICIONAL POR PRIORIDADE ──
+   Estas classes são aplicadas dinamicamente pelo React com base
+   na propriedade "priority" de cada tarefa.
+   Sobrescrevem a border-left do .task-card acima. */
+.task-card.baixa { border-color: var(--low);    } /* Verde  */
+.task-card.média { border-color: var(--medium); } /* Amarelo */
+.task-card.alta  { border-color: var(--high);   } /* Vermelho */
+
+/* ── TAREFA CONCLUÍDA ──
+   Classe "done" é adicionada quando item.completed === true */
+.task-card.done {
+  opacity: 0.6;          /* Deixa o card semi-transparente */
+  background: #e9ecef;   /* Fundo acinzentado para indicar inatividade */
+}
+
+/* Texto riscado no título das tarefas concluídas */
+.task-card.done h3 {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Título da tarefa dentro do card */
+.task-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+/* Label de prioridade */
+.task-content span {
+  display: block;       /* Exibe em linha própria (comportamento de bloco) */
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Data de criação */
+.task-content small {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+
+/* ============================================================
+   BOTÕES DE AÇÃO DO CARD (Concluir, Editar, Remover)
+
+   flex: 1 em cada botão faz todos terem a mesma largura,
+   dividindo igualmente o espaço disponível.
+   ============================================================ */
+.task-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap; /* Em cards estreitos, os botões podem quebrar linha */
+}
+
+/* Estilo base dos botões (cinza = Concluir/Reabrir) */
+.task-actions button {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  background: #6c757d; /* Cinza */
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.task-actions button:hover {
+  background: #5a6268;
+}
+
+/* Botão "Editar" → Azul */
+.task-actions button.edit {
+  background: #0d6efd;
+}
+
+.task-actions button.edit:hover {
+  background: #0b5ed7;
+}
+
+/* Botão "Remover" → Vermelho */
+.task-actions button.delete {
+  background: #dc3545;
+}
+
+.task-actions button.delete:hover {
+  background: #bb2d3b;
+}
+
+
+/* ============================================================
+   MODO DE EDIÇÃO INLINE
+
+   Aparece dentro do card quando o botão "Editar" é clicado.
+   Substitui visualmente o título, prioridade e data.
+   ============================================================ */
+
+/* Agrupa o input de edição e os botões salvar/cancelar */
+.edit-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Campo de texto para editar o título da tarefa */
+.edit-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+/* Destaque azul ao focar no campo de edição */
+.edit-input:focus {
+  outline: none;
+  border-color: #0d6efd;
+}
+
+/* Linha com os botões Salvar e Cancelar */
+.edit-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Botão "Salvar" → Verde */
+.edit-actions button.save {
+  flex: 1;
+  padding: 6px;
+  background: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.edit-actions button.save:hover {
+  background: #157347;
+}
+
+/* Botão "Cancelar" → Cinza */
+.edit-actions button.cancel {
+  flex: 1;
+  padding: 6px;
+  background: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.edit-actions button.cancel:hover {
+  background: #5a6268;
+}
